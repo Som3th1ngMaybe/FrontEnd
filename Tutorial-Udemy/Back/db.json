@@ -1,13 +1,41 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+  "libros": [
+    {
+      "id": "1",
+      "titulo": "Primer libro",
+      "autor": "Alexis",
+      "ISBN": "123456789",
+      "genero": "Ficción",
+      "precio": "5 MXN",
+      "disponibilidad": true
+    },
+    {
+      "id": "2",
+      "titulo": "Segundo libro",
+      "autor": "Alexis",
+      "ISBN": "123456789",
+      "genero": "Ficción",
+      "precio": "10 MXN",
+      "disponibilidad": true
+    },
+    {
+      "id": "3",
+      "titulo": "Tercer libro",
+      "autor": "Alexis",
+      "ISBN": "123456789",
+      "genero": "Ficción",
+      "precio": "15 MXN",
+      "disponibilidad": true
+    },
+    {
+      "id": "4",
+      "titulo": "Cuarto libro",
+      "autor": "Alexis",
+      "ISBN": "123456789",
+      "genero": "Ficción",
+      "precio": "20 MXN",
+      "disponibilidad": true
+    }
   ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "$schema": "./node_modules/json-server/schema.json"
 }

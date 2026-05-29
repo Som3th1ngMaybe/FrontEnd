@@ -4,7 +4,6 @@ import {ref, onMounted} from 'vue';
 export default {
     setup() {
 
-
         const libros = ref([]);
         const listarLibros = async () => {
             try {
@@ -27,7 +26,7 @@ export default {
                 }
             }
         };
-        
+
         onMounted(() => {
             listarLibros();
         });
@@ -58,24 +57,84 @@ export default {
         </thead>
         <tbody>
             <tr v-for="libro in libros" :key="libro.id">
-                <th scope="row">{{ libro.id }}</th>
+                <th class="alinear" scope="row">{{ libro.id }}</th>
                 <td>{{ libro.titulo }}</td>
                 <td>{{ libro.autor }}</td>
                 <td>{{ libro.ISBN }}</td>
                 <td>{{ libro.genero }}</td>
-                <td>{{ libro.precio }}</td>
-                <td>{{ libro.disponibilidad }}</td>
-                <div>
-                    <button @click="eliminarLibro(libro.id,libro.titulo)">
+                <td class="alinear">{{ libro.precio }}</td>
+                <td >{{ libro.disponibilidad }}</td>
+                <div class="botones">
+                    <button class="btn eliminar " @click="eliminarLibro(libro.id,libro.titulo)">
                         Eliminar
                     </button>
+                    <RouterLink class="btn editar" :to="{path:'/EditarLibro/'+libro.id}">Editar</RouterLink>
                 </div>
             </tr>
         </tbody>
     </table>
 </main>
-
 </template>
 
 <style scoped>
+
+table{
+    width: 90%;
+    border-collapse: collapse;
+    margin: 10px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+td, th{
+    border: 1px solid #000;
+    padding: 10px;
+
+}
+
+th {
+    background-color: #dddada;
+}
+
+.alinear{
+    text-align: center;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-around;
+    border: solid 1 px #000;
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+    padding: 10px 15 px;
+    text-decoration: none;
+    font-family: "UnifrakturMaguntia", cursive;
+    color: #000;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.editar{
+    background-color: orange;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.eliminar{
+    background-color: red;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.eliminar:hover{
+    background-color: crimson;
+}
+.editar:hover{
+    background-color: darkgoldenrod;
+}
+
 </style>

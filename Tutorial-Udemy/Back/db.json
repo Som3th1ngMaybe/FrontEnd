@@ -2,9 +2,9 @@
   "libros": [
     {
       "id": "1",
-      "titulo": "Primer libro",
+      "titulo": "Primer libro editado",
       "autor": "Alexis",
-      "ISBN": "123456789",
+      "ISBN": "123456780",
       "genero": "Ficción",
       "precio": "5 MXN",
       "disponibilidad": true
@@ -35,6 +35,24 @@
       "genero": "Ficción",
       "precio": "20 MXN",
       "disponibilidad": true
+    },
+    {
+      "titulo": "Test",
+      "autor": "Wero",
+      "ISBN": "123456789",
+      "genero": "Terror",
+      "precio": "80",
+      "disponibilidad": "Si",
+      "id": "rhGsYwHmOyg"
+    },
+    {
+      "titulo": "Sexto Libro",
+      "autor": "Wero",
+      "ISBN": "123456789",
+      "genero": "Fantasia",
+      "precio": "20",
+      "disponibilidad": "true",
+      "id": "D31J-b90zQc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -2,7 +2,7 @@
 
 import { ref, onMounted } from 'vue'
 import CrudComponent from './components/CrudComponent.vue'
-import api from './services/api'
+import api from './services/api.js'
 
 const cruds = ref([])
 
